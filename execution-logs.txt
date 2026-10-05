@@ -45,7 +45,7 @@ Result:
 Container task-3-terraform-nginx was running.
 
 Port mapping:
-0.0.0.0:8080 -> 80/tcp
+0.0.0.0:8081 -> 80/tcp
 
 
 6. Docker Port Verification
@@ -53,7 +53,7 @@ Command:
 docker port task-3-terraform-nginx
 
 Result:
-80/tcp -> 0.0.0.0:8080
+80/tcp -> 0.0.0.0:8081
 
 
 7. Terraform Plan - Verification

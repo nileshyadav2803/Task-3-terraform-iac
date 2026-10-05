@@ -56,7 +56,7 @@ An Nginx Docker image
 
 An Nginx Docker container
 
-Port mapping from host port 8080 to container port 80
+Port mapping from host port 8081 to container port 80
 
 
 The Docker image is used as the dependency for the Docker container.
@@ -108,7 +108,7 @@ task-3-terraform-nginx
 
 Port mapping:
 
-0.0.0.0:8080 -> 80/tcp
+0.0.0.0:8081 -> 80/tcp
 
 6. Verify the Infrastructure
 
