@@ -1,0 +1,72 @@
+TASK 3 - TERRAFORM IaC EXECUTION LOGS
+
+1. Terraform Init
+Command:
+terraform init
+
+Result:
+Terraform has been successfully initialized!
+
+
+2. Terraform Plan - Before Apply
+Command:
+terraform plan
+
+Result:
+Plan: 2 to add, 0 to change, 0 to destroy.
+
+Resources planned:
+- docker_image.nginx
+- docker_container.nginx
+
+
+3. Terraform Apply
+Command:
+terraform apply
+
+Result:
+Apply complete! Resources: 2 added, 0 changed, 0 destroyed.
+
+
+4. Terraform State
+Command:
+terraform state list
+
+Resources:
+- docker_container.nginx
+- docker_image.nginx
+
+
+5. Docker Verification
+Command:
+docker ps --filter "name=task-3-terraform-nginx"
+
+Result:
+Container task-3-terraform-nginx was running.
+
+Port mapping:
+0.0.0.0:8080 -> 80/tcp
+
+
+6. Docker Port Verification
+Command:
+docker port task-3-terraform-nginx
+
+Result:
+80/tcp -> 0.0.0.0:8080
+
+
+7. Terraform Plan - Verification
+Command:
+terraform plan
+
+Result:
+No changes. Your infrastructure matches the configuration.
+
+
+8. Terraform Destroy
+Command:
+terraform destroy
+
+Result:
+Destroy complete! Resources: 2 destroyed.
